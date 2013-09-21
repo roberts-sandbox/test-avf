@@ -259,12 +259,11 @@ var contactFun = function(){
     }
 */
 
-/*not needed
+
 	$('form').submit(function(event) {
     event.preventDefault();
     
 });
-*/
     
            $( '#contactForm' ).each(function(){this.reset();
     });
