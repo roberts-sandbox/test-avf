@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<!--
+Tyler Miller
+AVF 1309
+Week One Demo App
+9-8-13
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <title>Tyler's Application</title>
+    </head>
+    <body>
+       
+       <!-- Index page/home page -->
+       <section data-role="page" data-add-back-btn="true" id="home">
+       
+       	<header data-role="header" data-position="fixed">
+       	
+       		<h1>Tyler Miller AVF 1309</h1>
+       		
+       	</header>
+       	
+       		<section id="cta">
+				<img id="truck" src="img/truck.png" alt="Feature Image"/>
+			</section>
+
+       	
+       	<section data-role="content">
+       	
+       	<ul id="nativeFeatures" data-role="listview" data-inset="true">
+       	
+       		<li data-role="list-divider" class="liHeader">
+       			<h2>iOS & Android Native Features</h2>
+       		</li>
+       		
+       		<li><a href="#camera">Camera</a></li>
+       		<li><a href="#geo">GPS/GEO Location</a></li>
+       		<li><a href="#note">Notifications</a></li>
+       		<li><a href="#contact">Contacts</a></li>
+       		<li><a href="#net">Connection/Network</a></li>
+       	</ul>
+       	
+       	<ul id="apis" data-role="listview" data-inset="true">
+       	
+       		<li data-role="list-divider" class="liHeader">
+       			<h2>API'S</h2>
+       		</li>
+       		
+       		<li><a href="#instagram">Browse Lifted Trucks Via Instagram</a></li>
+       		<li><a href="#weather">Weather</a></li>
+       	</ul>
+       	
+       	<ul id="research" data-role="listview" data-inset="true">
+       	
+       		<li data-role="list-divider" class="liHeader">
+       			<h2>Research</h2>
+       		</li>
+       		
+       		<li><a href="#researchOne">Week One</a></li>
+       		<li><a href="#researchTwo">Week Two</a></li>
+       		<li><a href="#error">Week Three</a></li>
+       		<li><a href="#error">Week Four</a></li>
+       	</ul>
+       	
+       	</section>
+      
+       
+          <!-- Footer -->
+	       		<footer data-role="footer" data-position="fixed">
+	       			<h4>@ Tyler Miller</h4>
+	       				<nav data-role="navbar">
+	       					<ul>
+	       						<li><a href="#home" data-icon="home">Home</a></li>
+	       						<li><a href="#about" data-icon="info">About</a></li>
+	       						<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+			    				<li><a href="#error" data-icon="gear">Settings</a></li>
+	       					</ul>
+			    				
+	       				</nav>
+	       		</footer>
+       </section>
+	       	
+	      <!--Instagram -->
+	      <section data-role="page" data-add-back-btn="true" id="instagram">
+	      
+	      	<header data-role="header" data-position="fixed">
+	      	
+	      		<h1>Instagram Display</h1>
+	      			<a href="#" data-icon="refresh" class="ui-btn-right" id="streamRefresh">Refresh</a>
+	      	</header>
+	      	
+	      		<section data-role="content" id="instaCon">
+	      			
+	      			<h2 id="loadMessage">Lifted Trucks Now Loading!</h2>
+
+	      				<ul id="imageOutput">
+		  				
+		  				</ul>
+	      		</section>
+	      		
+	      		<!-- Footer -->
+	       		<footer data-role="footer" data-position="fixed">
+	       			<h4>@ Tyler Miller</h4>
+	       				<nav data-role="navbar">
+	       					<ul>
+	       						<li><a href="#home" data-icon="home">Home</a></li>
+	       						<li><a href="#about" data-icon="info">About</a></li>
+	       						<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+			    				<li><a href="#error" data-icon="gear">Settings</a></li>
+	       					</ul>
+	       				</nav>
+	       		</footer>
+	      </section>
+	       	
+	       	<!-- weather page -->
+	       	
+	       	<section data-role="page" data-add-back-btn="true" id="weather">
+	       	
+	       	
+	       	<header data-role="header" data-position="fixed">
+	      	
+	      		<h1>Weather</h1>
+	      			<a href="#" data-icon="refresh" class="ui-btn-right" id="weatherRefresh">Refresh</a>
+	      	</header>
+	      	
+	      	<section data-role="content" id="weatherCon">
+	      		
+	      		<h2 id="weatherMessage">Weather Info Now Loading!</h2>
+	      		
+	      			<ul id="weatherOutput">
+	      		
+	      			</ul>
+	      		</section>
+	      		
+	      		<!-- Footer -->
+	       		<footer data-role="footer" data-position="fixed">
+	       			<h4>@ Tyler Miller</h4>
+	       				<nav data-role="navbar">
+	       					<ul>
+	       						<li><a href="#home" data-icon="home">Home</a></li>
+	       						<li><a href="#about" data-icon="info">About</a></li>
+	       						<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+			    				<li><a href="#error" data-icon="gear">Settings</a></li>
+	       					</ul>
+	       				</nav>
+	       		</footer>
+	       	</section>
+	       	
+	       		<!--Camera Page-->
+
+		<section data-role="page" data-add-back-btn="true" id="camera">
+
+			<header data-role="header" data-position="fixed">
+
+				<h1>Take A Picture!</h1>
+
+			</header>
+
+			<section data-role="content" id="camDisplay">
+
+				<button id="camButton">Take A Picture!</button>
+
+				
+
+			</section>
+
+		
+		
+				    	<!-- Footer -->
+						<footer data-role="footer" data-position="fixed">
+							<h4>@ Tyler Miller</h4>
+						    	<nav data-role="navbar">
+						       		<ul>
+						       			<li><a href="#home" data-icon="home">Home</a></li>
+						       			<li><a href="#about" data-icon="info">About</a></li>
+						       			<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+								    	<li><a href="#error" data-icon="gear">Settings</a></li>
+						       		</ul>
+						    	</nav>
+						</footer>
+						       		
+	       		</section> 
+ 		   		
+ 		   		
+ 		   		<!--Geo Page-->
+
+		<section data-role="page" data-add-back-btn="true" id="geo">
+
+			<header data-role="header" data-position="fixed">
+
+				<h1>Find your GEOLocation</h1>
+					<a href="#" data-icon="refresh" class="ui-btn-right" id="geoRefresh">Refresh</a>
+
+			</header>
+
+			<section data-role="content" id="geoDis">
+			
+				<h2 id="geoInfo">GEO Info Now Loading!</h2>
+
+					 <ul id="geoOutput">
+	      				
+	      			</ul>
+	      			
+	      			
+
+
+
+			</section>
+
+		
+		
+				    	<!-- Footer -->
+						<footer data-role="footer" data-position="fixed">
+							<h4>@ Tyler Miller</h4>
+						    	<nav data-role="navbar">
+						       		<ul>
+						       			<li><a href="#home" data-icon="home">Home</a></li>
+						       			<li><a href="#about" data-icon="info">About</a></li>
+						       			<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+								    	<li><a href="#error" data-icon="gear">Settings</a></li>
+						       		</ul>
+						    	</nav>
+						</footer>
+						       		
+	       		</section> 
+	       		
+	       		
+	       		<!--Network Page-->
+
+		<section data-role="page" data-add-back-btn="true" id="net">
+
+			<header data-role="header" data-position="fixed">
+
+				<h1>Check Network Connection</h1>
+				
+
+			</header>
+
+			<section data-role="content" id="netDis">
+
+					 <button id="netBtn">Check Network Connection</button>
+	      			
+	      			
+
+
+
+			</section>
+
+		
+		
+				    	<!-- Footer -->
+						<footer data-role="footer" data-position="fixed">
+							<h4>@ Tyler Miller</h4>
+						    	<nav data-role="navbar">
+						       		<ul>
+						       			<li><a href="#home" data-icon="home">Home</a></li>
+						       			<li><a href="#about" data-icon="info">About</a></li>
+						       			<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+								    	<li><a href="#error" data-icon="gear">Settings</a></li>
+						       		</ul>
+						    	</nav>
+						</footer>
+						       		
+	       		</section> 
+	       		
+	       		<!-- contact page -->
+	       		
+	       		<section data-role="page" data-add-back-btn="true" id="contact">
+
+			<header data-role="header" data-position="fixed">
+
+				<h1>Create New Contacts</h1>
+				
+			</header>
+
+			<section data-role="content" id="conDis">
+			
+				<form  data-ajax="false" id="contactForm">
+					<fieldset data-role="fieldcontain">
+						<label for="conName">Name: </label>
+						<input type="text" id="conName" name="conName" placeholder="Tyler Miller" />
+					</fieldset>
+					<fieldset data-role="fieldcontain">
+						<label for="conNum">Phone Number: </label>
+						<input type="text" id="conNum" name="conNum" placeholder="555-655-6555" />
+					</fieldset>
+					<fieldset data-role="fieldcontain">
+						<label for="conEmail">Email: </label>
+						<input type="email" id="conEmail" name="conEmail" placeholder="exampl@example.com" />
+					</fieldset>
+					<fieldset data-role="fieldcontain">
+						<label for="conNote">Notes: </label>
+						<input type="text" id="conNote" name="conNote" placeholder="Notes go here!" />
+					</fieldset>
+					
+
+					 <input id="conBtn" type="submit" data-role="button" value="Create Contact!">
+					 <input id="clearFields"  data-role="button" data-icon="delete" type="reset" value="Reset"><a href="#"></a>
+
+					 
+				</form>
+				
+					<ul id="contactInfoDisplay">
+					
+					</ul>
+	      			
+	      			
+
+
+
+			</section>
+
+		
+		
+				    	<!-- Footer -->
+						<footer data-role="footer" data-position="fixed">
+							<h4>@ Tyler Miller</h4>
+						    	<nav data-role="navbar">
+						       		<ul>
+						       			<li><a href="#home" data-icon="home">Home</a></li>
+						       			<li><a href="#about" data-icon="info">About</a></li>
+						       			<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+								    	<li><a href="#error" data-icon="gear">Settings</a></li>
+						       		</ul>
+						    	</nav>
+						</footer>
+						       		
+	       		</section> 
+	       		
+	       		<!-- notifcation page -->
+	       		
+	       		<section data-role="page" data-add-back-btn="true" id="note">
+
+			<header data-role="header" data-position="fixed">
+
+				<h1>Notifications</h1>
+				
+
+			</header>
+
+			<section data-role="content" id="noteDis">
+			
+			<button id="noteBtn">Check Notifications!</button>
+			
+			</section>
+			
+			<!-- Footer -->
+						<footer data-role="footer" data-position="fixed">
+							<h4>@ Tyler Miller</h4>
+						    	<nav data-role="navbar">
+						       		<ul>
+						       			<li><a href="#home" data-icon="home">Home</a></li>
+						       			<li><a href="#about" data-icon="info">About</a></li>
+						       			<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+								    	<li><a href="#error" data-icon="gear">Settings</a></li>
+						       		</ul>
+						    	</nav>
+						</footer>
+						       		
+	       		</section> 
+
+			
+			
+
+
+	       		
+
+ 		   		
+
+
+
+
+
+	      
+       
+       <!-- error page -->
+       	<section data-role="page" data-add-back-btn="true" id="error">
+       	
+       		<header data-role="header" data-position="fixed">
+       			
+       			<h1>Tyler Miller AVF 1309</h1>
+       		</header>
+       		
+       			<section data-role="content" class="error">
+       			
+       			<strong>Sorry, unfortunately the feature has not yet been implemented.</strong>
+       			
+       			</section>
+       
+        
+        
+        <!-- Footer -->
+	       		<footer data-role="footer" data-position="fixed">
+	       			<h4>@ Tyler Miller</h4>
+	       				<nav data-role="navbar">
+	       					<ul>
+	       						<li><a href="#home"  data-icon="home">Home</a></li>
+	       						<li><a href="#about" data-icon="info">About</a></li>
+	       						<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+			    				<li><a href="#error" data-icon="gear">Settings</a></li>
+	       					</ul>
+	       				</nav>
+	       		</footer>
+       	</section>
+	       	
+	      <!--  	Research pages -->
+	       	<section data-role="page" data-add-back-btn="true" id="researchOne">
+	       	
+
+			<header data-role="header" data-position="fixed">
+		    	<h1>Weekly Research Topics</h1> 
+
+			</header>
+	
+		    	<section data-role="content" id="weekOne">
+		    		
+		    		<strong>Q(1) Less obvious perks of using 'live' data resources include 
+		    		logins and payments. How could Twitter be used in these two scenarios?</strong>
+
+						<p>A(1) I think that using twitter as a login method would make 
+						it possible to create an account on multiple sites or services 
+						without the need for filling out the same information several times. With the payment however, 
+						I am not sure how exactly the security issues would be addressed, 
+						maybe Google Wallet or Paypal would be better suited for this area.</p>
+
+					<strong>Q(2) Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</strong>
+
+						<p>A(2) As developers we need to use JSON-P, for it provides a method to 
+						request data from outside websites/domains, this not allowed by typical web 
+						browsers, due to the same origin policy. Without JSON-P this task would be much harder to accomplish.</p>
+
+					<strong>Q(3) Based on the JSON-P search results: what data resource(s) do you think might 
+						pair well with which types of Native device features?</strong>
+
+						<p>A(3) Geolocation: Google Maps, Map Quest, 
+						Apple Maps, AccuWeather, Twitter, Facebook etc
+						Camera/Capture: Instagram, Facebook, Flicker, Twitter
+						Storage/sync: Dropbox, Copy, Google drive, skydrive, iCloud, etc</p>
+
+					<strong>Q(4) Please describe any design and functionality intentions you may have for your Demo app components this month.</strong>
+
+						<p>A(4) Since hunting season is right around the corner, I plan on making some 
+						kind of app to keep track of your hunting spots(not exactly sure yet, but it will be hunting related).
+						For the camera I will be using Instagram to share photos of your kill with friends.
+						For geolocation I will use Google Maps to store your hunting location.The rest will be determined as I go.</p>
+
+					<strong>Q(5) Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc</strong>
+
+						<p>A(5) With workflow I try to start early enough to work out issues which I might have, I try to use 
+						only the most trusted resources when researching a topic for the project.Withe the 
+						development portion, I like to take a few hours a day to work on 
+						the project, and then take a bit of a break to cool down, rethink some issues. Design is
+						 definitely my weakness, I suppose I don't have the design type of mind, I do try and pull ideas 
+						 from other apps and combine them.</p>
+		       			
+
+		       			
+		       			
+		    	</section>
+		    	
+	       	
+		    	
+	      <!-- Footer -->
+	       		<footer data-role="footer" data-position="fixed">
+	       			<h4>@ Tyler Miller</h4>
+	       				<nav data-role="navbar">
+	       					<ul>
+	       						<li><a href="#home"  data-icon="home">Home</a></li>
+	       						<li><a href="#about" data-icon="info">About</a></li>
+	       						<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+			    				<li><a href="#error" data-icon="gear">Settings</a></li>
+	       					</ul>
+	       				</nav>
+	       		</footer>
+	       		
+	       	</section>
+	       		
+	       		<section data-role="page" data-add-back-btn="true" id="researchTwo">
+	       	
+
+			<header data-role="header" data-position="fixed">
+		    	<h1>Weekly Research Topics</h1> 
+
+			</header>
+	
+		    	<section data-role="content" id="weekTwo">
+		    	
+		    	
+		    	
+					<strong>Q(1) What are some of the ways that you could change your HTML 
+					on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance)</strong>
+					
+					<p>A(1) Honestly I think that currently the only thing which I could do to make the app more accessible 
+					would be using more section tags. However with al things I am certain that there are many more ways to 
+					improve upon the accessibility aspect of the html markup, which I am not yet familiar with.</p>
+					
+					<strong>Q(2) Visit a video service on the web (like YouTube) and search for "Screen Reader 
+					Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) 
+					that you see among the examples that are 
+					given - how could you fix them (or use them)?</strong>
+					
+					<p>A(2) Some common issues that I saw with Screen readers 
+					is the level of complexity, the users must first learn how to use these
+					 pieces of software, as well as have  some basic knowledge of html. One 
+					 last issue is the robotic nature of the experience which I feel puts
+					 people off from wanting to use these programs.
+					
+					I can see that the easiest way to relief these issues would be to make the
+					 web content more simplified. Another way could be the humanization of the 
+					 programs used by the impaired population, however I am not quite sure how that would
+					  be accomplished, for I am not a specialist in that area.</p>
+					
+					<strong>Q(3) Devices: Please list two devices (and some of their features) that are
+					 made specifically to support Accessibility.</strong>
+					
+					<p>A(3) iOS:
+					VoiceOver
+					Siri
+					Speak Selection
+					Dictation
+					Zoom
+					Large Text
+					Invert Colors
+					Mono Audio
+					Visible and Vibrating Alerts
+					
+					Android:
+					Speak passwords (speak passwords as you type them)
+					Manage call answering/ending (use a physical button to end calls)
+					Screen timeout (how long before the screen goes blank)
+					TalkBack (speak all events that happen)
+					Explore by touch (hear or see descriptions of what you are touching on the device)
+					Negative colors (reverse colors of the screen)
+					Change font size
+					Mono audio (so both channels of audio are routed to single earpiece)
+					Turn off all sounds
+					Tap and hold delay</p>
+					
+					<strong>Q(4) Mobile Apps: Please list two apps 
+					(either Android or iOS, or both) that are made specifically to support Accessibility.</strong>
+					
+					<p>A(4) iOS: Siri, Voiceover 
+					Android: Handcent SMS (hearing impaired), Google Voice (hearing impaired)</p>
+							    	
+		    	
+		    	
+		    	</section>
+		    	
+		    	
+		    	<!-- Footer -->
+						<footer data-role="footer" data-position="fixed">
+							<h4>@ Tyler Miller</h4>
+						    	<nav data-role="navbar">
+						       		<ul>
+						       			<li><a href="#home" data-icon="home">Home</a></li>
+						       			<li><a href="#about" data-icon="info">About</a></li>
+						       			<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+								    	<li><a href="#error" data-icon="gear">Settings</a></li>
+						       		</ul>
+						    	</nav>
+						</footer>
+						       		
+	       		</section> 
+	       		
+	       		
+	       	
+
+
+
+
+
+
+		    		
+
+	       		<!-- about page -->
+	       		<section data-role="page" data-add-back-btn="true" id="about">
+	       		
+	       						<header data-role="header" data-position="fixed">
+			   						<h1>About</h1> 
+
+	       						</header>
+	
+		   							<section  class="about" data-role="content">
+		   							
+		   							<p>Hello my name is Tyler Miller, I am currently working on an mobile application 
+		   							for finding trails and truck parks. Please provide any feedback.</p>
+		   							
+		   							</section>
+		   							
+		   							<!-- Footer -->
+						       		<footer data-role="footer" data-position="fixed">
+						       			<h4>@ Tyler Miller</h4>
+						       				<nav data-role="navbar">
+						       					<ul>
+						       						<li><a href="#home" data-icon="home">Home</a></li>
+						       						<li><a href="#about" data-icon="info">About</a></li>
+						       						<li><a href="mailto:tyemiller4@gmail.com" data-icon="info">Contact Us</a></li>
+								    				<li><a href="#error" data-icon="gear">Settings</a></li>
+						       					</ul>
+						       				</nav>
+						       		</footer>
+						       		
+	       		</section>
+
+
+	       		
+	       			
+
+		   		  
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       <!--  scrpit tags -->
+       	
+       	<script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

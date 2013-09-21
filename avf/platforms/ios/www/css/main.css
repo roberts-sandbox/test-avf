@@ -1,0 +1,193 @@
+/* media queries  */
+
+
+/* retina ipad landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {	
+	.ui-page{
+		background: url(../img/whenwet.png);
+		max-width: 100%;
+	}
+		#imageOutput{
+		text-align: center;
+	}
+		.picBox{
+			display: inline-block;
+			max-width: 44%;
+			margin: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+			
+		}
+		.img{
+			max-width: 100%;
+		}
+		
+		
+		
+
+}
+/*ipad portiat*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {  
+	.ui-page{
+		background: url(../img/mud.png);
+		max-width: 100%;
+		
+	}
+	#imageOutput{
+		text-align: center;
+	}
+	.picBox{
+		max-width: 100%;
+		margin: auto;
+	}
+
+	
+}
+
+
+/* Large screens ----------- */
+@media only screen 
+and (min-device-width : 1025px)
+and (max-device-width : 2500px) {
+/* Styles */
+	.ui-page{
+		background: url(../img/whenwet.png);
+		max-width: 100%;
+	}
+		#imageOutput{
+		text-align: center;
+	}
+	.picBox{
+		max-width: 100%;
+	}
+
+
+}
+
+
+
+
+
+/* Smartphones  -----------  need to mess with this a bit more*/
+@media only screen 
+and (max-device-width : 320px) 
+and (max-device-width : 568px){
+/* Styles */
+	.ui-page{
+		background: url(../img/mud.png);
+		max-width: 100%;
+	}
+		#imageOutput{
+		text-align: center;
+	}
+
+
+}
+
+
+h2 {
+	font-family: fantasy, impact;
+	color: white;
+	padding: 5px;
+	text-shadow: 2px 2px 7px #111111;
+	text-align: center;
+}
+
+#imageOutput{
+	color: white;
+	text-shadow: none;
+}
+
+#weatherOutput, #geoOutput{
+	color: white;
+	text-shadow: none;
+	text-align: center;
+}
+
+#weekOne, #weekTwo{
+	color: white;
+	text-shadow: none;
+}
+
+ul{
+	list-style-type: none;
+
+}
+
+.ui-btn-inner{
+	background-color: #345214;
+}
+
+.ui-li{
+	background:transparent;
+	
+}
+
+.error, .about{
+	color: white;
+}
+
+.ui-bar-a{
+	font-family: fantasy, impact;
+	color: rgb(255,255,255);
+	background-color: #0a290a;
+	text-shadow: 2px 2px 7px #111111;
+	background-image: none;
+}
+
+.ui-title {
+    margin: 0.6em 10% 0.8em !important;
+}
+
+div.ui-footer.ui-bar-a{
+	font-family: fantasy, impact;
+	color: rgb(255,255,255);
+	
+
+
+}
+
+.ui-btn-up-c:visited, .ui-btn-up-c a.ui-link-inherit {
+	color: white;
+	text-shadow: none;
+}
+
+.ui-bar-c{
+	margin: 5px;
+	padding: 5px;
+}
+
+.ui-listview{
+	margin: 5px;
+	padding: 5px;
+}
+
+
+.ui-bar-b {
+	background-color: #345214;
+	border: none;
+	background-image: none;
+}
+
+#cta {
+	text-align: center;
+	margin-top: 5px;
+	
+}
+
+.ui-btn-text, .ui-btn-hidden{
+	color: white;
+	text-shadow: none;
+}
+
+label, #contactInfoDisplay, #geoOutput{
+	text-align: center;
+	color: white;
+	
+}
